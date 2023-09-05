@@ -35,13 +35,13 @@
                 <div class="form-group col-sm-8 ">
                     <input type="url" name="url" id="url" class="form-control" placeholder="Enter your link for shorten">
                     @if ($errors->any())
-                    <div class="alert alert-danger alert-dismissible">
+                    <div class="alert alert-danger alert-dismissible mt-2">
                         <button type="button" class="close" data-dismiss="alert">&times;</button>
-                        <ul>
-                            @foreach ($errors->all() as $error)
-                                <li>{{ $error }}</li>
-                            @endforeach
-                        </ul>
+                       
+                        @foreach ($errors->all() as $error)
+                            {{ $error }}
+                        @endforeach
+                       
                     </div>
                         <!-- <div class="alert alert-danger alert-dismissible fade show mt-1 m-0 p-0">
                            
@@ -49,7 +49,7 @@
                         </div> -->
                     @endif
                     @if ($message = Session::get('success'))
-                        <div class="alert alert-success alert-dismissible fade show m-1 p-1">
+                        <div class="alert alert-success alert-dismissible fade show mt-2">
                             <p>{{ $message }}</p>
                             <button type="button" class="close" data-dismiss="alert" aria-label="Close">
                                 <span aria-hidden="true">&times;</span>
